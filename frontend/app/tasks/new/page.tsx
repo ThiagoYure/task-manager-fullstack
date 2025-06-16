@@ -7,10 +7,11 @@ import { useRouter } from 'next/navigation';
 
 export default function NewTaskPage() {
   const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   const router = useRouter();
 
   const handleSubmit = async () => {
-    await api.post('/tasks', { title });
+    await api.post('/tasks', { title, description });
     router.push('/tasks');
   };
 
@@ -21,6 +22,13 @@ export default function NewTaskPage() {
         label="Título"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        fullWidth
+        sx={{ mt: 2 }}
+      />
+      <TextField
+        label="Descrição"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
         fullWidth
         sx={{ mt: 2 }}
       />
