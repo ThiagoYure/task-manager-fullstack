@@ -1,23 +1,35 @@
 import { createTheme } from '@mui/material/styles';
+import { Anton, Montserrat } from 'next/font/google';
+
+const anton = Anton({
+    subsets: ['latin'],
+    weight: '400'
+});
+
+const montserrat = Montserrat({
+    subsets: ['latin'],
+});
 
 const lightTheme = createTheme({
+    typography: {
+        fontFamily: [
+            anton,
+            montserrat
+        ].join(','),
+    },
     palette: {
         mode: 'dark',
         primary: {
-            main: '#1976d2',
-            light: '#42a5f5',
-            dark: '#1565c0',
-            contrastText: '#fff',
+            main: '#0186FF',
+            contrastText: '#1C2121',
         },
         secondary: {
-            main: '#1976d2',
-            light: '#42a5f5',
-            dark: '#1565c0',
-            contrastText: '#fff',
+            main: '#FFBD00',
+            contrastText: '#1C2121',
         },
         background: {
-            default: '#121212',
-            paper: '#ffffff'
+            default: '#1C2121',
+            paper: '#454653'
         },
     },
 });

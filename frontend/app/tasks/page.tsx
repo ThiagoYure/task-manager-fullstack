@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import api from '@/services/api';
 import { Box, Typography, List, ListItem, Checkbox, Button } from '@mui/material';
 import Link from 'next/link';
+import CreateTaskComponent from '@/components/CreateTaskComponent';
 
 type Task = {
   _id: string;
@@ -22,13 +23,16 @@ export default function TasksPage() {
   }, []);
 
   return (
-    <Box p={4}>
-      <Typography variant="h4">Lista de Tarefas</Typography>
-      <Link href="/tasks/new">
-        <Button variant="contained" color="primary" sx={{ mt: 2 }}>
-          Nova Tarefa
-        </Button>
-      </Link>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      py: 5,
+      width: 1
+    }}>
+      <Typography variant="h3">Lista de Tarefas</Typography>
+      <CreateTaskComponent/>
       <List>
         {tasks.map(task => (
           <ListItem key={task._id}>
