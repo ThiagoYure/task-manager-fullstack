@@ -66,14 +66,13 @@ export default function TasksPage() {
       height: '95vh',
     }}>
       <Typography variant='inherit'
-        fontSize={{ xs: '1rem', sm: '1rem', md: '2rem', lg: '4rem' }}
+        fontSize={{ xs: '3rem', sm: '3rem', md: '3rem', lg: '4rem' }}
         fontFamily={'anton'}
         textAlign={'center'}
         mb={2}>Lista de Tarefas</Typography>
       <CreateTaskComponent onClose={handleCloseNewTask} />
       <List
-        sx={{ display: 'flex', flexDirection: 'column', width: '100%', maxHeight: 1, marginY: 4, padding: 2, borderRadius: 2, maxWidth: 500, gap: 2, bgcolor: 'background.paper' }}
-        component="div"
+        sx={{ display: 'flex', flexDirection: 'column', maxHeight: 1, width: 0.8, marginY: 4, padding: 2, borderRadius: 2, maxWidth: 500, gap: 2, bgcolor: 'background.paper' }}
       >
         {tasks.length > 0 ? (
           tasks.map((task: Task) => {

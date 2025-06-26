@@ -68,7 +68,7 @@ export default function SimpleDialog(props: SimpleDialogProps) {
 
     return (
         <Dialog onClose={handleClose} open={open} sx={{ width: 1, fontFamily: 'montserrat' }} >
-            <DialogTitle>Edite sua Tarefa</DialogTitle>
+            <DialogTitle width={{ xs: 0.8, sm: 500, md: 500, lg: 500 }}>Edite sua Tarefa</DialogTitle>
             <IconButton
                 size="medium"
                 onClick={handleClose}

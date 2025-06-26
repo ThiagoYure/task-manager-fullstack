@@ -37,10 +37,10 @@ export default function CreateTaskComponent(props: NewTaskProps) {
     };
 
     return (
-        <Box sx={{ bgcolor: 'background.default', width: 0.25, fontFamily: 'montserrat' }}>
+        <Box sx={{ bgcolor: 'background.default', fontFamily: 'montserrat' }} width={{ xs: 0.8, sm: 0.5, md: 0.3, lg: 0.25 }}>
             <Button variant='contained' color='primary' size='medium' onClick={handleOpen} startIcon={<Add />} fullWidth> Nova Tarefa</Button>
             <Dialog onClose={handleClose} open={open}>
-                <DialogTitle fontFamily={'montserrat'} width={500}>Nova Tarefa</DialogTitle>
+                <DialogTitle fontFamily={'montserrat'} width={{ xs: 0.8, sm: 500, md: 500, lg: 500 }}>Nova Tarefa</DialogTitle>
                 <IconButton
                     size="medium"
                     onClick={handleClose}
