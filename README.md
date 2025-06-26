@@ -12,7 +12,7 @@ Um projeto fullstack utilizando NestJS no backend e Next.js no frontend, com tem
 ![Preview Nova Tarefa](./tela-task-manager-new-task.jpg)
 
 🔗 [Acesse o frontend (Vercel)](https://task-manager-fullstack-git-main-thiago-yures-projects.vercel.app/)  
-🔗 [Acesse a API (Railway)](https://task-manager-fullstack-production-e830.up.railway.app/)
+🔗 [Acesse a API (Railway)](https://task-manager-fullstack-production-e830.up.railway.app/tasks/)
 
 ---
 
